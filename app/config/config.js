@@ -1,8 +1,9 @@
 /**
  * Author: Nhm Nazmul
  * Date: 09/09/2024
+ * File Name: Application Configuration
  * Late Update: no  Update here
- * ============= Application Configuration =============
+ *
  */
 
 export const PORT = 5000;
@@ -21,4 +22,3 @@ export const URL_ENCODED = true;
 
 export const REQUEST_TIME = 20 * 60 * 1000;
 export const REQUEST_LIMIT = 2000;
-
