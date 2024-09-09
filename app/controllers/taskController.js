@@ -6,12 +6,22 @@
  *
  */
 
-export const createTask = async (req, res) => {};
+export const createTask = async (req, res) => {
+  return res.json({ message: "Successful" });
+};
 
-export const updateTask = async (req, res) => {};
+export const updateTask = async (req, res) => {
+  return res.json({ message: "Successful" });
+};
 
-export const listTaskByStatus = async (req, res) => {};
+export const listTaskByStatus = async (req, res) => {
+  return res.json({ message: "Successful" });
+};
 
-export const deleteTask = async (req, res) => {};
+export const deleteTask = async (req, res) => {
+  return res.json({ message: "Successful" });
+};
 
-export const countTask = async (req, res) => {};
+export const countTask = async (req, res) => {
+  return res.json({ message: "Successful" });
+};

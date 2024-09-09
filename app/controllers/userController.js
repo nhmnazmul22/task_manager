@@ -6,16 +6,30 @@
  *
  */
 
-export const userSingUp = async (req, res) => {};
+export const userRegistration = async (req, res) => {
+    return res.json({message: "Successful"})
+};
 
-export const userLogin = async (req, res) => {};
+export const userLogin = async (req, res) => {
+     return res.json({message: "Successful"})
+};
 
-export const userProfile = async (req, res) => {};
+export const userProfile = async (req, res) => {
+     return res.json({message: "Successful"})
+};
 
-export const updateUserInfo = async (req, res) => {};
+export const updateProfile = async (req, res) => {
+     return res.json({message: "Successful"})
+};
 
-export const verifyEmail = async (req, res) => {};
+export const verifyEmail = async (req, res) => {
+     return res.json({message: "Successful"})
+};
 
-export const verifyOTP = async (req, res) => {};
+export const verifyOTP = async (req, res) => {
+     return res.json({message: "Successful"})
+};
 
-export const resetPassword = async (req, res) => {};
+export const resetPassword = async (req, res) => {
+     return res.json({message: "Successful"})
+};
