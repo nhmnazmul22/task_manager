@@ -7,7 +7,7 @@
  */
 
 export const PORT = 5000;
-export const DATABASE_URI = "";
+export const DATABASE_URI = "mongodb+srv://nhmnazmul22:z5BpbhJUj3MAtFf5@cluster0.mnssu.mongodb.net/TaskManager";
 export const JWT_KEY = "";
 export const JWT_EXPIRED_TIME = 30 * 24 * 60 * 60;
 

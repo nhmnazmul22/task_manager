@@ -10,24 +10,26 @@
 import express from "express";
 
 //Internal Imports
-import * as taskController from "../app/controllers/taskController";
-import * as userController from "../app/controllers/userController";
+import * as taskController from "../app/controllers/taskController.js";
+import * as userController from "../app/controllers/userController.js";
 
 // initial express router
-const Router = express.Router();
+const router = express.Router();
 
 // User Routers
-Router.post("/Register", userController.userRegistration);
-Router.post("/Login", userController.userLogin);
-Router.post("/Profile", userController.userProfile);
-Router.post("/ProfileUpdate", userController.updateProfile);
-Router.post("/VerifyEmail", userController.verifyEmail);
-Router.post("/VerifyOTP", userController.verifyOTP);
-Router.post("/ResetPassword", userController.resetPassword);
+router.post("/Register", userController.userRegistration);
+router.post("/Login", userController.userLogin);
+router.post("/Profile", userController.userProfile);
+router.post("/ProfileUpdate", userController.updateProfile);
+router.post("/VerifyEmail", userController.verifyEmail);
+router.post("/VerifyOTP", userController.verifyOTP);
+router.post("/ResetPassword", userController.resetPassword);
 
 // Task Routes
-Router.post("/CreateTask", taskController.createTask);
-Router.post("/UpdateTask", taskController.updateTask);
-Router.post("/ListTaskByStatus", taskController.listTaskByStatus);
-Router.post("/CountTask", taskController.countTask);
-Router.post("/DeleteTask", taskController.deleteTask);
+router.post("/CreateTask", taskController.createTask);
+router.post("/UpdateTask", taskController.updateTask);
+router.post("/ListTaskByStatus", taskController.listTaskByStatus);
+router.post("/CountTask", taskController.countTask);
+router.post("/DeleteTask", taskController.deleteTask);
+
+export default router;
