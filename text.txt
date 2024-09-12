@@ -3,3 +3,5 @@
 3. Route Config
 4. App.js Config
 5. Postman Config
+6. email credentials (Not Complete);
+7. Project Model Setup

@@ -5,7 +5,28 @@
  * Late Update: no  Update here
  *
  */
+// External Imports
+import jwt from "jsonwebtoken";
 
-export const tokenEncoded = (req, res) => {};
+// Internal Imports
+import { JWT_EXPIRED_TIME, JWT_KEY } from "../config/config.js";
 
-export const tokenDecoded = (req, res) => {};
+export const tokenEncoded = (email, user_id) => {
+  // Implement JWT encoding logic here
+  const KEY = JWT_KEY;
+  const EXPIRED_TIME = { expiresIn: JWT_EXPIRED_TIME };
+  const PAYLOAD = { email: email, user_id: user_id };
+
+  const token = jwt.sign(PAYLOAD, KEY, EXPIRED_TIME);
+  return token;
+};
+
+export const tokenDecoded = (token) => {
+  try {
+    const decoded = jwt.verify(token, JWT_KEY);
+    console.log(decoded.user_id);
+    return decoded;
+  } catch (e) {
+    return null;
+  }
+};
