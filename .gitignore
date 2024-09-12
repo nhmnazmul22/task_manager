@@ -1,2 +1,5 @@
-nodemodule
-/app/config/config.js
+# Ignore node_modules directory
+node_modules/
+
+# Ignore specific config.js file
+app/config/config.js
