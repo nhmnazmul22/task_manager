@@ -26,10 +26,14 @@ router.post("/VerifyOTP", userController.verifyOTP);
 router.post("/ResetPassword", userController.resetPassword);
 
 // Task Routes
-router.post("/CreateTask", taskController.createTask);
-router.post("/UpdateTask", taskController.updateTask);
-router.get("/ListTaskByStatus", taskController.listTaskByStatus);
-router.get("/CountTask", taskController.countTask);
-router.delete("/DeleteTask", taskController.deleteTask);
+router.post("/CreateTask", authMiddleware, taskController.createTask);
+router.post("/UpdateTask/:id", authMiddleware, taskController.updateTask);
+router.get(
+  "/ListTaskByStatus/:status",
+  authMiddleware,
+  taskController.listTaskByStatus
+);
+router.get("/CountTask", authMiddleware, taskController.countTask);
+router.delete("/DeleteTask/:id", authMiddleware, taskController.deleteTask);
 
 export default router;

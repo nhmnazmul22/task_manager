@@ -12,12 +12,11 @@ const TaskSchema = new mongoose.Schema(
   {
     title: { type: String, required: true },
     description: { type: String },
-    status: { type: String, require: true },
-    user_id: { type: mongoose.Schema.Types.ObjectId },
+    status: { type: String, require: true, default: "Pending" },
+    user_id: { type: mongoose.Schema.Types.ObjectId, require: true },
   },
   { timestamps: true, versionKey: false }
 );
-
 
 // Define Task Model
 const Task = mongoose.model("tasks", TaskSchema);
